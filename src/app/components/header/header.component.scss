@@ -5,8 +5,11 @@ header {
   justify-content: center;
   width: 100%;
   min-width: 100vh;
-
   gap: 32px;
+
+  @media (max-width: 430px) {
+    min-width: 50vh;
+  }
 }
 
 header .logo-container {
@@ -38,6 +41,13 @@ header .text-container h1 {
 }
 header .text-container p {
   color: var(--light-gray);
+
+  @media (max-width: 530px) {
+    max-width: 90%;
+  }
+  @media (max-width: 470px) {
+    max-width: 80%;
+  }
 }
 
 header .text-container .heading {

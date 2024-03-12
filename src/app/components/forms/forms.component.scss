@@ -45,16 +45,11 @@
     width: 100%;
 
     padding: 8px 4px;
-    position: relative;
+
     color: #9b9b9b;
 
     input {
       margin-right: 8px;
-    }
-
-    span {
-      position: absolute;
-      right: 8px;
     }
   }
   .form-group .radio-wrapper:nth-last-child(3) {
@@ -68,10 +63,16 @@
 
   .form-group .btn-wrapper {
     display: flex;
+    flex-direction: column;
     gap: 12px;
     align-items: center;
     width: 100%;
     justify-content: center;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+    }
 
     .btn {
       font-size: 18px;
@@ -84,13 +85,46 @@
       border: none;
       cursor: pointer;
     }
+
     .btn-primary {
       background-color: var(--yellow);
       font-weight: 600;
+
+      @media (max-width: 830px) {
+        width: 55%;
+        display: flex;
+        justify-content: center;
+      }
     }
     .btn-secondary {
       font-weight: 600;
       border: 1px solid var(--dark-gray);
+
+      @media (max-width: 830px) {
+        width: 55%;
+        display: flex;
+        justify-content: center;
+      }
     }
+  }
+  .form-group .checkbox-wrapper {
+    color: var(--light-gray);
+    margin: 24px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+  .form-group .checkbox-wrapper input[type="checkbox"] {
+    margin-right: 4px;
+  }
+  .form-group .checkbox-wrapper .checkbox {
+    margin-bottom: 20px;
   }
 }
