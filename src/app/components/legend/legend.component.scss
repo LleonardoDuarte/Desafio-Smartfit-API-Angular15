@@ -1,0 +1,44 @@
+:host {
+  .legend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    justify-content: center;
+
+    background-color: #f3f3f3;
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+
+    border-radius: 4px;
+    padding: 24px 12px;
+    @media (min-width: 1220px) {
+      flex-direction: row;
+    }
+
+    &-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 36px;
+    }
+
+    &-images {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    &-image img {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h4 {
+      text-align: center;
+    }
+  }
+}
